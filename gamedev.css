@@ -71,9 +71,9 @@ nav {
     display : flex;
     justify-content : space-between;
     align-items: center;
-    position: fixed;
     width: 1134px;
     z-index : 100;
+    position:relative;
      
 }
 nav .logo 
@@ -110,7 +110,7 @@ color : #fff;
     width : 100%;
     align-items : center;
     justify-content : space-between;
-    padding-top: 60px;
+    margin-top : -50px;
 }
 
 .hero-section .left h1{
@@ -146,7 +146,7 @@ margin-left: 100px;
 }
 
 .hero-section .card .students-enrolled{
-    top: 250px;
+    top: 200px;
     width: 206px;
     margin : 643px;
 }
@@ -187,10 +187,15 @@ margin-left : 25px;
 .hero-section .right{
     align-self : flex-end;
     margin-right : 100px;
+    margin-top : -50px;
+   
 }
 .hero-section .right img{
-    height : 582px;
+    height : 560px;
     vertical-align: middle;
+    top: -37px;
+    position: relative;
+
 }
 
 section{
@@ -225,6 +230,7 @@ margin: 12px 0;
     display : flex;
     gap : 100px;
     align-items: center;
+    height: 100vh;
 
 }
 .testimonial .test-card{
@@ -234,6 +240,10 @@ margin-bottom: 50px;
 box-shadow : 0px 9px 36px rgba(0,0,0,0.2);
 background: #fff;
 position : relative;
+}
+
+.testimonial .right .button.orange{
+    margin-left : -15px;
 }
 
 .testimonial .test-card .content{
@@ -260,6 +270,8 @@ color : var(--blue);
 }
 .testimonial .test-card .info{
     padding : 24px 32px;
+    border-radius: 24px;
+    background: #fff;
     border-radius: 24px;
 }
 
@@ -296,6 +308,10 @@ color: var(--blue);
 }
 .testimonial .test-card:last-child::before{
     left:40px;
+    top : -50px;
+    border-radius : 0  0 24px 24px;
+    height : calc(100% + 90px);
+    z-index : -1;
 }
 
 .courses-section{
@@ -307,7 +323,8 @@ color: var(--blue);
 }
 .courses-section .courses {
     display : flex;
-    gap : 70px;
+    justify-content:space-around;
+    gap : -80px;
 }
 
 .courses-section .courses img {
@@ -320,7 +337,8 @@ color: var(--blue);
 .courses-section .courses .course{
     background: #fff;
     border-radius: 24px;
-    padding : 0px 32px;
+    padding : 32px 32px;
+    width: 526px;
 
 }
 .courses-section .courses h3{
@@ -344,13 +362,20 @@ line-height: 24px;
 text-align: left;
 color: var(--blue);
 position: relative;
+width: 72px;
+margin-right: -30px;
 
+}
+
+.courses-section .class .button.orange{
+    margin-top : 20px;
+    left : 1070px;
 }
 .courses-section .courses .duration::before{
     content : url(images/Vectorclock.svg);
     position : absolute;
     top : 2px;
-    right : 40px;
+    right : 80px;
 
 }
 
@@ -461,4 +486,27 @@ text-align: left;
 footer form{
     margin-top : 16px;
     margin-left : 20px;
+    position : relative;
+}
+footer form input{
+    font-size : 16px;
+    line-height:200%;
+    border-radius : 8px;
+    padding:8px 32px;
+    width : 100%;
+    color : #000;
+}
+footer form .subscribe{
+    position : absolute;
+    right : 5px;
+    top : 50%;
+    border-radius : 8px;
+    background : var(--blue);
+    padding-left : 6px;
+    padding-right : 6px;
+    transform : translateY(-50%);
+    color : #fff;
+    font-size : 16px;
+    cursor: pointer;
+    
 }
